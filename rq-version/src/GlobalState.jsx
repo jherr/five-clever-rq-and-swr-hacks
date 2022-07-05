@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import client from "./client";
 
 const useRQSGlobalState = (key, initialData) => [
-  useQuery("sharedText", () => initialData, {
+  useQuery(key, () => initialData, {
     enabled: false,
     initialData,
   }).data,
