@@ -36,7 +36,7 @@ const WebWorker = () => {
       />
       <Button
         onClick={() =>
-          multiplyNumbers({ a: valueA, b: valueB }).then((v) =>
+          multiplyNumbers({ a: +valueA, b: +valueB }).then((v) =>
             mutate(v, {
               revalidate: false,
             })
